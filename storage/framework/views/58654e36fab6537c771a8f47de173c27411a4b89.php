@@ -2,12 +2,12 @@
     
 <div class="card mb-4">
     <div class="card-body">
-        <h4>
+        <h5>
             <a href="/status/<?php echo e($status->id); ?>" class="text-dark">
                 <?php echo e($status->body); ?>
 
             </a>                
-        </h4> 
+        </h5> 
 
         <?php if($status->image): ?>
             <img src="/images/status/<?php echo e($status->image); ?>" alt="status image" class="img-fluid my-1">

@@ -14,13 +14,13 @@
                 </div>
                 <div class="col-md-8 my-auto">
                     <h2 class="my-3"><?php echo e(auth()->user()->name); ?></h2>
-                    <h4><?php echo nl2br(e(auth()->user()->bio)); ?></h4>
-                    <h6 class="text-muted">
+                    <h6><?php echo nl2br(e(auth()->user()->bio)); ?></h6>
+                    <p class="text-muted">
                         <?php echo e($followers); ?>
 
                         <?php echo e($followers <= 1 ? 'follower' : 'followers'); ?>
 
-                    </h6>                    
+                    </p>                    
                     <hr>
                     <form action="/profile/picture" method="POST" enctype="multipart/form-data">
                         <?php echo csrf_field(); ?>

@@ -14,11 +14,11 @@
                 </div>
                 <div class="col-md-8 my-auto">
                     <h2 class="my-3">{{ auth()->user()->name }}</h2>
-                    <h4>{!! nl2br(e(auth()->user()->bio)) !!}</h4>
-                    <h6 class="text-muted">
+                    <h6>{!! nl2br(e(auth()->user()->bio)) !!}</h6>
+                    <p class="text-muted">
                         {{ $followers }}
                         {{ $followers <= 1 ? 'follower' : 'followers' }}
-                    </h6>                    
+                    </p>                    
                     <hr>
                     <form action="/profile/picture" method="POST" enctype="multipart/form-data">
                         @csrf

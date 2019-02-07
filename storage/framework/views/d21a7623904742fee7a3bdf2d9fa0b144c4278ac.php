@@ -1,14 +1,14 @@
 <?php $__env->startSection('content'); ?>
 
     <?php $__currentLoopData = $peoples; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <div class="row mb-4">
-            <div class="col-md-8 card-header">
-                <a href="/user/profile/<?php echo e($user->id); ?>">
-                    <?php echo e($user->name); ?>
+            <div class="card-header mb-2">
+                <div class="container">
+                    <a href="/user/profile/<?php echo e($user->id); ?>">
+                        <?php echo e($user->name); ?>
 
-                </a>
+                    </a>
+                </div>                
             </div>                
-        </div>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
     <?php echo e($peoples->links()); ?>

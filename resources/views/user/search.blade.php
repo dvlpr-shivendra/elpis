@@ -34,12 +34,6 @@
                 </div>
             </div>
             @endforeach
-        
-        
-
-                            
-
-                            
     
 
     @endisset

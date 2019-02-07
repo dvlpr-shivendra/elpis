@@ -2,11 +2,11 @@
     
 <div class="card mb-4">
     <div class="card-body">
-        <h4>
+        <h5>
             <a href="/status/{{ $status->id }}" class="text-dark">
                 {{ $status->body }}
             </a>                
-        </h4> 
+        </h5> 
 
         @if ($status->image)
             <img src="/images/status/{{ $status->image }}" alt="status image" class="img-fluid my-1">
