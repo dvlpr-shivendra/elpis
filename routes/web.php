@@ -1,5 +1,9 @@
 <?php
 
+Route::get('/welcome', function() {
+    return view('welcome');
+})->name('welcome');
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {

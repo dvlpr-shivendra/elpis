@@ -24,6 +24,8 @@
         <?php echo $__env->make('partials.nav', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php echo $__env->make('partials.alerts', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
+        <?php echo $__env->yieldContent('jumbotron'); ?>
+
         <?php if( request()->path() == 'login' || request()->path() == 'register'): ?>
             <main class="py-4">            
         <?php else: ?>

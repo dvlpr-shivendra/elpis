@@ -24,6 +24,8 @@
         @include('partials.nav')
         @include('partials.alerts')
 
+        @yield('jumbotron')
+
         @if ( request()->path() == 'login' || request()->path() == 'register')
             <main class="py-4">            
         @else
