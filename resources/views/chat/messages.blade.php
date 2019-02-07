@@ -34,7 +34,7 @@
                 $message->update(["read" => true]);
             @endphp
         @endif
-        <div class="card bg-warning mb-3" style="width:90%">            
+        <div class="card bg-success mb-3" style="width:90%">            
             <div class="card-body">
                     <h5 class="text-left text-white">
                         {{ $message->body }}
@@ -79,7 +79,7 @@
             .listen('MessageSent', function (event) {
                 
                 $("#messages").append(`
-                    <div class="card bg-warning mb-3" style="width:90%">            
+                    <div class="card bg-success mb-3" style="width:90%">            
                         <div class="card-body">
                             <h5 class="text-left text-white">
                                 ${event.body}

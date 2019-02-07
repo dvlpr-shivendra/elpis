@@ -10,9 +10,7 @@
         </form>
     </div>
     
-    @isset($users)
-    <div>                
-                                
+    @isset($users)                                
         
         @if ($users->isEmpty())
             <h2>User does not exist.</h2>
@@ -20,24 +18,30 @@
             <h2 class="mb-4">Search result:</h2>
         @endif
 
-        @foreach ($users as $user)
-
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <a href="/user/profile/{{ $user->id }}">
-                    {{ $user->name }}
-                </a>
+            @foreach ($users as $user)
+            <div class="row bg-secondry mb-2 px-2 py-2 bg-info ">
+                <div class="col-xs-2">
+                    @if ($user->profile_picture == null)
+                        <img src="/images/profile/nodp.png" alt="no profile picture found" class="img-thumbnail img-fluid image-small ">                           
+                    @else
+                        <img src="/images/profile/{{ $user->profile_picture }}" alt="profile picture" class="img-thumbnail img-fluid image-small">
+                    @endif
+                </div>
+                <div class="col-xs-8 my-auto ml-4">
+                    <a href="/user/profile/{{ $user->id }}" class="text-left text-white">
+                        {{ $user->name }}
+                    </a>
+                </div>
             </div>
-            <div class="col-md-4">
-                <a href="/chat/{{ $user->id }}" class="btn btn-primary">
-                    Message
-                </a>
-            </div>
-        </div>                        
+            @endforeach
+        
+        
 
-        <hr>
-        @endforeach
-    </div>
+                            
+
+                            
+    
+
     @endisset
 
 @endsection

@@ -17,6 +17,6 @@ $factory->define(App\User::class, function (Faker $faker) {
 $factory->define(App\Status::class, function (Faker $faker) {
     return [
         'body' => $faker->paragraph,
-        'owner_id' => rand(1, 100),
+        'owner_id' => rand(1, 3),
     ];
 });

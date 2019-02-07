@@ -15,10 +15,10 @@
                 <div class="col-md-8 my-auto">
                     <h2 class="my-3">{{ auth()->user()->name }}</h2>
                     <h4>{!! nl2br(e(auth()->user()->bio)) !!}</h4>
-                    <h5 class="text-muted">
+                    <h6 class="text-muted">
                         {{ $followers }}
                         {{ $followers <= 1 ? 'follower' : 'followers' }}
-                    </h5>                    
+                    </h6>                    
                     <hr>
                     <form action="/profile/picture" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -26,7 +26,7 @@
                             <label for="profile_picture">Change profile picture</label>
                             <input type="file" class="form-control-file" name="profile_picture" id="profile_picture" placeholder="" aria-describedby="fileHelpId">
                         </div>
-                        <input type="submit"  value="change" class="btn btn-sm">                        
+                        <input type="submit"  value="change" class="btn btn-sm btn-info">                        
                     </form>                    
                 </div>
             </div>            
@@ -43,7 +43,7 @@
 
                 <h3 id="update-status">Update status</h3>
                 <div class="form-group">
-                    <textarea class="form-control" name="body" id="body" rows="3" style="border: solid 1px"></textarea>
+                    <textarea class="form-control" name="body" id="body" rows="3"></textarea>
                 </div>
                 
                 <div class="form-group">

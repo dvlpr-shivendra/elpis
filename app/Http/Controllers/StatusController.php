@@ -17,9 +17,12 @@ class StatusController extends Controller
     {
         $following = DB::table('followers')
                     ->where('follower', auth()->user()->id)
-                    ->value('user_id');
+                    ->pluck('user_id')
+                    ->toArray();
+
+                    // dd($following);
         
-        $statuses = Status::where('owner_id', $following)->latest()->simplePaginate(20);
+        $statuses = Status::whereIn('owner_id', $following)->latest()->simplePaginate(20);
 
         return view('feed', ['statuses' => $statuses]);
     }

@@ -5,9 +5,12 @@
             <i class="fas fa-circle text-success"></i>
             <i class="fas fa-circle text-success"></i>
         </a>
+
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
             <span class="navbar-toggler-icon"></span>
         </button>
+        
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
@@ -49,12 +52,12 @@
             <ul class="navbar-nav ml-auto">
                 <?php if(auth()->guard()->check()): ?>
                     <li class="<?php echo e(Request::path() == 'search' ? 'active' : ''); ?>">
-                        <a class="nav-link" href="/search">
+                        <a class="nav-link" href="/search" title="search for a user">
                              <i class="fas fa-search"></i>
                         </a>
                     </li>
                     <li class="<?php echo e(Request::path() == 'peoples' ? 'active' : ''); ?>">
-                        <a class="nav-link" href="/peoples">
+                        <a class="nav-link" href="/peoples" title="discover peoples">
                             <i class="fas fa-users"></i>
                         </a>
                     </li>

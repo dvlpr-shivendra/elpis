@@ -10,9 +10,7 @@
         </form>
     </div>
     
-    <?php if(isset($users)): ?>
-    <div>                
-                                
+    <?php if(isset($users)): ?>                                
         
         <?php if($users->isEmpty()): ?>
             <h2>User does not exist.</h2>
@@ -20,25 +18,31 @@
             <h2 class="mb-4">Search result:</h2>
         <?php endif; ?>
 
-        <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="row bg-secondry mb-2 px-2 py-2 bg-info ">
+                <div class="col-xs-2">
+                    <?php if($user->profile_picture == null): ?>
+                        <img src="/images/profile/nodp.png" alt="no profile picture found" class="img-thumbnail img-fluid image-small ">                           
+                    <?php else: ?>
+                        <img src="/images/profile/<?php echo e($user->profile_picture); ?>" alt="profile picture" class="img-thumbnail img-fluid image-small">
+                    <?php endif; ?>
+                </div>
+                <div class="col-xs-8 my-auto ml-4">
+                    <a href="/user/profile/<?php echo e($user->id); ?>" class="text-left text-white">
+                        <?php echo e($user->name); ?>
 
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <a href="/user/profile/<?php echo e($user->id); ?>">
-                    <?php echo e($user->name); ?>
-
-                </a>
+                    </a>
+                </div>
             </div>
-            <div class="col-md-4">
-                <a href="/chat/<?php echo e($user->id); ?>" class="btn btn-primary">
-                    Message
-                </a>
-            </div>
-        </div>                        
+            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        
+        
 
-        <hr>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    </div>
+                            
+
+                            
+    
+
     <?php endif; ?>
 
 <?php $__env->stopSection(); ?>
