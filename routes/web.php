@@ -29,5 +29,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/inbox', 'ChatController@inbox');
     Route::get('/messages/{id}', 'ChatController@messages');
     Route::post('/message', 'ChatController@send');
-    Route::any('/chat/{id}', 'ChatController@start');
+    Route::post('/chat/{id}', 'ChatController@start');
 });

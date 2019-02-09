@@ -22,12 +22,20 @@
             </div>
             
             <hr>
-            <a href="/chat/{{ $user->id }}" class="btn btn-primary">Message</a>
+
             @if ($follows->isEmpty())
-                <a href="/follow/{{ $user->id }}" class="btn btn-primary">Follow</a>       
+                <a href="/follow/{{ $user->id }}" class="btn btn-primary float-left mr-2">Follow</a>       
             @else
-                <a href="/unfollow/{{ $user->id }}" class="btn btn-secondry">Unfollow</a>
+                <a href="/unfollow/{{ $user->id }}" class="btn btn-secondry float-left mr-2">
+                    Unfollow
+                </a>
             @endif
+
+            <form action="/chat/{{ $user->id }}" method="post">
+                @csrf
+                <input type="submit" value="Message" class="btn btn-info">
+            </form>
+
             
         </div>
     </div>

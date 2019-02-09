@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('jumbotron')
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-3">403</h1>

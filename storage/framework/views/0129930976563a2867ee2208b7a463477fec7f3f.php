@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('jumbotron')
+<?php $__env->startSection('jumbotron'); ?>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-3">404</h1>
@@ -11,4 +9,5 @@
             </p>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), array('__data', '__path')))->render(); ?>
