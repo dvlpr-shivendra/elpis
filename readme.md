@@ -30,7 +30,7 @@ If you want to run it on your system, You will need these:
 Follow these steps:
 
 - Clone the repo.
-- Then execute these commands In the terminal:
+- Then execute these commands In the terminal:</br>
     i. composer install</br>
     ii. npm install</br>
     iii. cp .env.example .env</br>
