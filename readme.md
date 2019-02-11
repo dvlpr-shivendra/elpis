@@ -34,8 +34,10 @@ Follow these steps:
     i. composer install</br>
     ii. npm install</br>
     iii. cp .env.example .env</br>
+    iv. php artisan key:generate
 - Configure your database and pusher credentials in the .env which is present in the projects's root directory.
-- Finally execute command <strong>php artisan serve </strong> and visit http://localhost:8000 in the web browser.
+-Execute command - php artisan migrate
+- Finally execute command php artisan serve and visit http://localhost:8000 in the web browser.
 
 
 
