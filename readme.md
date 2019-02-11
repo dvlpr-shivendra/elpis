@@ -1,4 +1,4 @@
-<h1 style="text-align:center;font-color=green">Elpis<h1>
+<h1>Elpis<h1>
 
 
 ## About Elpis
