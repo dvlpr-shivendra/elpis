@@ -5,7 +5,7 @@
 
 Elpis is a social media website made with laravel 5.7, It has following features:
 - User profile.
-- User can post their status with or without images.
+- Users can post their status with or without images.
 - Likes and comments.
 - Chatting.
 - Search functionality.
