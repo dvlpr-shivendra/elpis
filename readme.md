@@ -11,7 +11,7 @@ Elpis is a social media website made with laravel 5.7, It has following features
 - Search functionality.
 - Saveral other features which will enhance user experience.
 
-Elpis is clean, simple and minimal. A live version of these website is available at http://elpis.herokuapp.com
+Elpis is clean, simple and minimal. A live version of this website is available at http://elpis.herokuapp.com
 
 
 ## Requirements
@@ -36,7 +36,7 @@ Follow these steps:
     iii. cp .env.example .env</br>
     iv. php artisan key:generate
 - Configure your database and pusher credentials in the .env which is present in the projects's root directory.
--Execute command - php artisan migrate
+- Execute command - php artisan migrate
 - Finally execute command php artisan serve and visit http://localhost:8000 in the web browser.
 
 
